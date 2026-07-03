@@ -20,7 +20,6 @@ export default function CategoryWeightsBoxplot({ data }: Props) {
     marker: { size: 3 }, // Make the outlier dots a bit smaller
     line: { width: 1.5 },
     jitter: 1,
-    boxpoints: 'outliers',
     pointpos: 0,
     boxmean: 'sd'
   }));
