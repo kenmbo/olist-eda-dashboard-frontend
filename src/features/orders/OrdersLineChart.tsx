@@ -4,7 +4,7 @@ import type { DailyOrdersResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
 // Create a Plot component to use in a JSX
-const Plot = createPlotlyComponent.default(Plotly);
+const Plot = createPlotlyComponent(Plotly);
 
 interface Props {
   data: DailyOrdersResponse;
@@ -50,4 +50,3 @@ export default function OrdersLineChart({ data }: Props) {
     </ChartCard>
   );
 }
-

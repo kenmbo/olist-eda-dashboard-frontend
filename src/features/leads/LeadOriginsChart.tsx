@@ -3,7 +3,7 @@ import createPlotlyComponent from 'react-plotly.js/factory';
 import type { LeadOriginResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
-const Plot = createPlotlyComponent.default(Plotly);
+const Plot = createPlotlyComponent(Plotly);
 
 interface Props {
   data: LeadOriginResponse;
@@ -52,4 +52,3 @@ export default function LeadOriginsChart({ data }: Props) {
     </ChartCard>
   );
 }
-
