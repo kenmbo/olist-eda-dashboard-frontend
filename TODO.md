@@ -125,6 +125,32 @@ Problem:
 - The reported mismatches include string titles where Plotly types expect title objects, trace properties that are not recognized on the inferred trace type, and Plotly option strings that are narrower in the type definitions than the runtime accepts.
 - The current compiler output reports this across multiple Plotly chart components.
 
+Plan:
+- Start by fixing real shape mismatches that are clearly represented in the Plotly types:
+  - Replace axis title strings such as `title: 'Revenue (BRL)'` with title objects such as `title: { text: 'Revenue (BRL)' }`.
+  - Replace string booleans such as `zeroline: 'true'` with real booleans such as `zeroline: true`.
+- Add explicit Plotly typings where inline object inference is too broad:
+  - Type reusable layouts as `Partial<Layout>`.
+  - Type chart traces or trace arrays as `Data` / `Data[]` where that helps TypeScript select the intended Plotly overload.
+- For runtime-supported Plotly options that are missing or too narrow in the installed `@types/plotly.js` package, keep the workaround narrow:
+  - Prefer a small local intersection type for that specific trace shape.
+  - If a cast is required, cast only the affected trace object or property, not the entire `<Plot />` component.
+  - Avoid broad `any` unless there is no precise local type available.
+- Re-run `tsc -b` after the axis/layout cleanup first, then after the trace-specific cleanup, so any remaining `TS2769` messages can be handled without mixing causes.
+
+Files expected to be affected:
+- `src/features/categories/CategoryMonthlySalesChart.tsx`
+- `src/features/categories/CategoryTreemap.tsx`
+- `src/features/categories/CategoryWeightsBoxplot.tsx`
+- `src/features/customers/CustomerDensityMap.tsx`
+- `src/features/delivery/DeliveryStagesChart.tsx`
+- `src/features/delivery/DeliveryTrendChart.tsx`
+- `src/features/leads/LeadOriginsChart.tsx`
+- `src/features/orders/OrderCostsHistograms.tsx`
+- `src/features/orders/OrdersHeatmap.tsx`
+- `src/features/orders/OrdersLineChart.tsx`
+- `src/features/sellers/SellerShippingBoxPlot.tsx`
+
 ## Final Verification
 
 - Run `tsc -b`.
