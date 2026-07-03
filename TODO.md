@@ -117,6 +117,14 @@ Problem:
   - `src/features/categories/CategoryMonthlySalesChart.tsx`
   - `src/features/categories/CategoryWeightsBoxplot.tsx`
 
+## Newly Surfaced TS2769: Plotly Prop Type Mismatches
+
+Problem:
+- After fixing the `react-plotly.js/factory` call shape, TypeScript can now type-check the `<Plot />` component props more precisely.
+- Several chart components now fail overload resolution for `<Plot />` because some `data` or `layout` values do not match the installed Plotly type definitions.
+- The reported mismatches include string titles where Plotly types expect title objects, trace properties that are not recognized on the inferred trace type, and Plotly option strings that are narrower in the type definitions than the runtime accepts.
+- The current compiler output reports this across multiple Plotly chart components.
+
 ## Final Verification
 
 - Run `tsc -b`.
