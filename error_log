@@ -1,0 +1,42 @@
+
+> frontend@0.0.0 build
+> tsc -b && vite build
+
+src/components/common/ChartCard.tsx(2,31): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/features/categories/CategoryMonthlySalesChart.tsx(1,30): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/categories/CategoryMonthlySalesChart.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/categories/CategoryTreemap.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/categories/CategoryTreemap.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/categories/CategoryWeightsBoxplot.tsx(1,30): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/categories/CategoryWeightsBoxplot.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/categories/CategoryWeightsBoxplot.tsx(22,5): error TS1117: An object literal cannot have multiple properties with the same name.
+src/features/customers/CustomerDensityMap.tsx(2,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/customers/CustomerDensityMap.tsx(7,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/delivery/DeliveryStagesChart.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/delivery/DeliveryStagesChart.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/delivery/DeliveryTrendChart.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/delivery/DeliveryTrendChart.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/leads/LeadOriginsChart.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/leads/LeadOriginsChart.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/orders/OrderCostsHistograms.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/orders/OrderCostsHistograms.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/orders/OrdersHeatmap.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/orders/OrdersHeatmap.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/orders/OrdersLineChart.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-basic-dist'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-basic-dist/plotly-basic.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-basic-dist` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-basic-dist';`
+src/features/orders/OrdersLineChart.tsx(7,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/features/orders/ordersApi.ts(2,10): error TS1484: 'DailyOrdersResponse' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/features/sellers/SellerShippingBoxPlot.tsx(1,20): error TS7016: Could not find a declaration file for module 'plotly.js-dist-min'. '/home/kuser/python/olist-eda-dashboard/frontend-alt/node_modules/plotly.js-dist-min/plotly.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/plotly.js-dist-min` if it exists or add a new declaration (.d.ts) file containing `declare module 'plotly.js-dist-min';`
+src/features/sellers/SellerShippingBoxPlot.tsx(6,36): error TS2339: Property 'default' does not exist on type '(plotly: object) => ComponentType<PlotParams>'.
+src/main.tsx(1,1): error TS6133: 'StrictMode' is declared but its value is never read.
+src/main.tsx(4,1): error TS6133: 'createRoot' is declared but its value is never read.
