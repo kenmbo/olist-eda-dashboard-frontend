@@ -108,6 +108,15 @@ and then render with `createRoot(...).render(<StrictMode>...</StrictMode>)`.
 
 - Re-run `tsc -b` and confirm TS6133 is cleared.
 
+## Newly Surfaced TS1484: Plotly `Data` Type Imports
+
+Problem:
+- After adding declarations for the Plotly bundle modules, TypeScript can now resolve `Data` from `plotly.js-dist-min`.
+- Because `verbatimModuleSyntax` is enabled, `Data` is recognized as a type and cannot be imported through a runtime import.
+- The current compiler output reports this in:
+  - `src/features/categories/CategoryMonthlySalesChart.tsx`
+  - `src/features/categories/CategoryWeightsBoxplot.tsx`
+
 ## Final Verification
 
 - Run `tsc -b`.
@@ -117,4 +126,3 @@ and then render with `createRoot(...).render(<StrictMode>...</StrictMode>)`.
 ```json
 "build": "tsc -b && vite build"
 ```
-
