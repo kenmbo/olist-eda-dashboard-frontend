@@ -1,5 +1,6 @@
 // src/components/common/ChartCard.tsx
-import { useState, useEffect, ReactNode } from 'react';
+import { useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
 
 interface Props {

@@ -1,4 +1,5 @@
-import Plotly, { Data } from 'plotly.js-dist-min';
+import Plotly from 'plotly.js-dist-min';
+import type { Data } from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import type { CategoryWeightResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
