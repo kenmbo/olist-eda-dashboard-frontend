@@ -45,7 +45,8 @@ Plan:
 - Update each chart component to call:
 
 ```ts
-const Plot = createPlotlyComponent(Plotly);
+// @ts-expect-error - Vite requires .default for CommonJS interop, but TS types don't recognize it
+const Plot = createPlotlyComponent.default(Plotly);
 ```
 
 - Apply this consistently across all chart components using the factory.

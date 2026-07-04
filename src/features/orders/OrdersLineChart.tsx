@@ -3,8 +3,8 @@ import createPlotlyComponent from 'react-plotly.js/factory';
 import type { DailyOrdersResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
-// Create a Plot component to use in a JSX
-const Plot = createPlotlyComponent(Plotly);
+// @ts-expect-error - Vite requires .default for CommonJS interop, but TS types don't recognize it
+const Plot = createPlotlyComponent.default(Plotly);
 
 interface Props {
   data: DailyOrdersResponse;

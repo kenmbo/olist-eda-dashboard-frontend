@@ -3,7 +3,8 @@ import createPlotlyComponent from 'react-plotly.js/factory';
 import type { LeadOriginResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
-const Plot = createPlotlyComponent(Plotly);
+// @ts-expect-error - Vite requires .default for CommonJS interop, but TS types don't recognize it
+const Plot = createPlotlyComponent.default(Plotly);
 
 interface Props {
   data: LeadOriginResponse;
