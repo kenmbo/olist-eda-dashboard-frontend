@@ -29,7 +29,7 @@ export default function OrdersHeatmap({ data }: Props) {
           paper_bgcolor: 'transparent',
           plot_bgcolor: 'transparent',
           xaxis: {
-            title: 'Hour of Day',
+            title: { text: 'Hour of Day' },
             gridcolor: '#374151', // Tailwind gray-700
             tickfont: { color: '#9ca3af' },
           },

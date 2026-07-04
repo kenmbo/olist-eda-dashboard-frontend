@@ -1,9 +1,21 @@
 import Plotly from 'plotly.js-dist-min';
+import type { Data } from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import type { DeliveryTrendResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
 const Plot = createPlotlyComponent(Plotly);
+
+type FillGradient = {
+  type: 'vertical';
+  colorscale: Array<[number, string]>;
+  start: number;
+  stop: number;
+};
+
+type ScatterTraceWithFillGradient = Data & {
+  fillgradient: FillGradient;
+};
 
 interface Props {
   data: DeliveryTrendResponse;
@@ -28,21 +40,21 @@ export default function DeliveryTrendChart({ data }: Props) {
             name: 'Daily Average',
             line: { color: 'white', width: 1 }, // Tailwind gray-600, thin line
             opacity: 1,
-	    fill: 'tozeroy',
-  fillgradient: {
-    type: 'vertical',
-    colorscale: [
-      //[0, 'rgba(255, 165, 10, 0)'], // Starting color with 80% opacity
-      [0, 'rgba(0, 165, 10, 0)'], // Starting color with 80% opacity
-      //[1, 'rgba(255, 165, 10, 0.5)']    // Fades to fully transparent at the other end
-      [1, 'rgba(0, 165, 10, 0.5)']    // Fades to fully transparent at the other end
-    ],
-    // 'start' and 'stop' define the axis range the gradient spans
-    // Note: If zooming/panning, you may need to update these values dynamically
-    start: 0, 
-    stop: 17  
-  },
-          },
+            fill: 'tozeroy',
+            fillgradient: {
+              type: 'vertical',
+              colorscale: [
+                //[0, 'rgba(255, 165, 10, 0)'], // Starting color with 80% opacity
+                [0, 'rgba(0, 165, 10, 0)'], // Starting color with 80% opacity
+                //[1, 'rgba(255, 165, 10, 0.5)']    // Fades to fully transparent at the other end
+                [1, 'rgba(0, 165, 10, 0.5)']    // Fades to fully transparent at the other end
+              ],
+              // 'start' and 'stop' define the axis range the gradient spans
+              // Note: If zooming/panning, you may need to update these values dynamically
+              start: 0,
+              stop: 17
+            },
+          } as ScatterTraceWithFillGradient,
           {
             // LOWESS trendline
             x: data.dates,
@@ -66,7 +78,7 @@ export default function DeliveryTrendChart({ data }: Props) {
             range: [data.dates[startIndex], data.dates[endIndex]],
           },
           yaxis: { 
-            title: 'Days to Deliver',
+            title: { text: 'Days to Deliver' },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
             rangemode: 'tozero',

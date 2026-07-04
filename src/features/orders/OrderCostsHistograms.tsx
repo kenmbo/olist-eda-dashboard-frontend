@@ -1,9 +1,14 @@
 import Plotly from 'plotly.js-dist-min';
+import type { Data } from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import type { OrderCostsResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
 const Plot = createPlotlyComponent(Plotly);
+
+type HistogramTrace = Data & {
+  nbinsx: number;
+};
 
 interface Props {
   data: OrderCostsResponse;
@@ -17,7 +22,7 @@ export default function OrderCostsHistograms({ data }: Props) {
     paper_bgcolor: 'transparent',
     plot_bgcolor: 'transparent',
     yaxis: {
-      title: 'Frequency',
+      title: { text: 'Frequency' },
       gridcolor: '#374151',
       tickfont: { color: '#9ca3af' },
     },
@@ -36,12 +41,12 @@ export default function OrderCostsHistograms({ data }: Props) {
               type: 'histogram',
               nbinsx: 1000,
               marker: { color: '#6c87a3' },
-            },
+            } as HistogramTrace,
           ]}
           layout={{
             ...sharedLayout,
             xaxis: {
-              title: 'Product cost (BRL)',
+              title: { text: 'Product cost (BRL)' },
               gridcolor: '#374151',
               tickfont: { color: '#9ca3af' },
               range: [0, 500],
@@ -62,12 +67,12 @@ export default function OrderCostsHistograms({ data }: Props) {
               type: 'histogram',
               nbinsx: 800,
               marker: { color: '#ad865f' },
-            },
+            } as HistogramTrace,
           ]}
           layout={{
             ...sharedLayout,
             xaxis: {
-              title: 'Shipping cost (BRL)',
+              title: { text: 'Shipping cost (BRL)' },
               gridcolor: '#374151',
               tickfont: { color: '#9ca3af' },
               range: [0, 80], // Filtering the view

@@ -36,7 +36,7 @@ export default function CategoryMonthlySalesChart({ data }: Props) {
             tickangle: -45, // Angled text to prevent month labels from overlapping
           },
           yaxis: { 
-            title: 'Revenue (BRL)',
+            title: { text: 'Revenue (BRL)' },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' }
           },

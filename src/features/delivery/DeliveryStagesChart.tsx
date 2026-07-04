@@ -48,7 +48,7 @@ export default function DeliveryStagesChart({ data }: Props) {
             tickangle: -45, // Angle the city names so they fit nicely
           },
           yaxis: { 
-            title: 'Average Days',
+            title: { text: 'Average Days' },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
           },

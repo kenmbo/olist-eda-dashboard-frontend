@@ -1,10 +1,15 @@
 // src/features/customers/CustomerDensityMap.tsx
 import Plotly from 'plotly.js-dist-min';
+import type { Data } from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import type { CustomerMapResponse } from '../../types/api';
 import ChartCard from '../../components/common/ChartCard';
 
 const Plot = createPlotlyComponent(Plotly);
+
+type DensityMapTrace = Data & {
+  radius: number;
+};
 
 interface Props {
   data: CustomerMapResponse;
@@ -29,7 +34,7 @@ return (
           hoverinfo: 'text',
           text: hoverText,
           // ... keeping all your existing colorbar configs
-        }]}
+        } as DensityMapTrace]}
         layout={{
           autosize: true,
           margin: { t: 10, r: 0, l: 0, b: 0 },

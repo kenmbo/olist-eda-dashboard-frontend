@@ -36,7 +36,7 @@ export default function LeadOriginsChart({ data }: Props) {
           paper_bgcolor: 'transparent',
           plot_bgcolor: 'transparent',
           xaxis: { 
-            title: 'Number of Leads',
+            title: { text: 'Number of Leads' },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' }
           },

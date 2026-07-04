@@ -29,10 +29,9 @@ export default function OrdersLineChart({ data }: Props) {
           margin: { t: 0, r: 0, l: 30, b: 15 },
           paper_bgcolor: 'transparent', // Let the Tailwind bg color show through
           plot_bgcolor: 'transparent',
-          coloraxis: {colorbar:'white'},
           xaxis: {
             gridcolor: '#555', // Tailwind gray-200
-            zeroline: 'true',
+            zeroline: true,
             zerolinecolor: '#ff0000',
             zerolinewidth: 2,
             tickfont: { color: 'white' },

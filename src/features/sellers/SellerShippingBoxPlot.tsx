@@ -28,7 +28,7 @@ export default function SellerShippingBoxPlot({ data }: Props) {
           paper_bgcolor: 'transparent',
           plot_bgcolor: 'transparent',
           xaxis: {
-            title: 'Sellers with...',
+            title: { text: 'Sellers with...' },
             gridcolor: '#e5e7eb',
             tickfont: { color: '#9ca3af' },
             // Force Plotly to display the buckets in correct numerical order
@@ -36,7 +36,7 @@ export default function SellerShippingBoxPlot({ data }: Props) {
             categoryarray: ['1-9 orders', '10-99 orders', '100-999 orders', '1000+ orders'],
           },
           yaxis: {
-            title: 'Shipping time (days)',
+            title: { text: 'Shipping time (days)' },
             gridcolor: '#e5e7eb',
             tickfont: { color: '#9ca3af' },
           },

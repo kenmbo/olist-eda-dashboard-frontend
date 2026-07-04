@@ -29,7 +29,7 @@ export default function CategoryTreemap({ data }: Props) {
               showscale: true, // Adds the legend on the side
             },
             textinfo: 'label+value',
-            hoverinfo: 'label+value+percent parent',
+            hovertemplate: '%{label}<br>%{value}<br>%{percentParent}<extra></extra>',
           },
         ]}
         layout={{

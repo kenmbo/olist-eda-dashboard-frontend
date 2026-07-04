@@ -39,7 +39,7 @@ export default function CategoryWeightsBoxplot({ data }: Props) {
             tickfont: { color: '#9ca3af' },
           },
           yaxis: { 
-            title: 'Weight (grams)',
+            title: { text: 'Weight (grams)' },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
             zerolinecolor: '#4b5563',
