@@ -12,6 +12,7 @@ import CategoryWeightsContainer from './features/categories/CategoryWeightsConta
 import DeliveryTrendContainer from './features/delivery/DeliveryTrendContainer';
 import DeliveryStagesContainer from './features/delivery/DeliveryStagesContainer';
 import LeadOriginsContainer from './features/leads/LeadOriginsContainer';
+import LeadConversionsContainer from './features/leads/LeadConversionsContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -97,6 +98,9 @@ function App() {
             <>
               <div className="col-span-1 lg:col-span-12">
                 <LeadOriginsContainer />
+              </div>
+	      <div className="col-span-1 lg:col-span-6">
+                <LeadConversionsContainer />
               </div>
             </>
        }
