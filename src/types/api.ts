@@ -60,3 +60,10 @@ export interface LeadOriginResponse {
   origins: string[];
   leads: number[];
 }
+
+export interface LeadConversionResponse {
+  origins: string[];
+  qualified_leads: number[];
+  closed_leads: number[];
+  conversion_rate: number[];
+}
