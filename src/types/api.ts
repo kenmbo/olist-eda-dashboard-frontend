@@ -67,3 +67,8 @@ export interface LeadConversionResponse {
   closed_leads: number[];
   conversion_rate: number[];
 }
+
+export interface SellerDistributionResponse {
+  buckets: string[];
+  seller_count: number[];
+}
