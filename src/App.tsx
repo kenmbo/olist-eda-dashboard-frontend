@@ -12,7 +12,7 @@ import CategoryWeightsContainer from './features/categories/CategoryWeightsConta
 import DeliveryTrendContainer from './features/delivery/DeliveryTrendContainer';
 import DeliveryStagesContainer from './features/delivery/DeliveryStagesContainer';
 import LeadOriginsContainer from './features/leads/LeadOriginsContainer';
-import LeadConversionsContainer from './features/leads/LeadConversionsContainer';
+import LeadConversionsContainer from './features/leads/LeadConversionsContainer';import SellerDistributionContainer from './features/sellers/SellerDistributionContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -94,16 +94,22 @@ function App() {
         )}
 
        {/* =======SELLERS======= */}
-       {activeTab === 'sellers' && 
+       {activeTab === 'sellers' && (
             <>
-              <div className="col-span-1 lg:col-span-12">
+              {/* Row 1: Lead Data */}
+              <div className="col-span-1 lg:col-span-6">
                 <LeadOriginsContainer />
               </div>
-	      <div className="col-span-1 lg:col-span-6">
+              <div className="col-span-1 lg:col-span-6">
                 <LeadConversionsContainer />
               </div>
+
+              {/* Row 2: Seller Data */}
+              <div className="col-span-1 lg:col-span-12">
+                <SellerDistributionContainer />
+              </div>
             </>
-       }
+       )} 
 
        {/* =======PREDICTIONS======= */}
        {activeTab === 'predictions' && 
