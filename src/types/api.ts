@@ -72,3 +72,8 @@ export interface SellerDistributionResponse {
   buckets: string[];
   seller_count: number[];
 }
+
+export interface ReviewDistributionResponse {
+  scores: string[];
+  counts: number[];
+}

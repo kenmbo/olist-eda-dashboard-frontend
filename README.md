@@ -7,7 +7,7 @@ This dashboard website showcases featuring various top-level key preformance ind
 
 The website [olisteda.com](https://olisteda.com/) is deployed through Google Cloud Platform (GCP). The GCP uses a service runner that integrates Github's live CI/CD to use and run this respository itself.
 
-Anything pushed to this repository (specifically the main branch) is automatically updated by the website.
+Anything pushed to this repository (specifically the main branch) is automatically updated to the website.
 
 ## Building from source
 
