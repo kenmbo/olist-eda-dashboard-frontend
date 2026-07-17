@@ -13,6 +13,7 @@ import DeliveryTrendContainer from './features/delivery/DeliveryTrendContainer';
 import DeliveryStagesContainer from './features/delivery/DeliveryStagesContainer';
 import LeadOriginsContainer from './features/leads/LeadOriginsContainer';
 import LeadConversionsContainer from './features/leads/LeadConversionsContainer';import SellerDistributionContainer from './features/sellers/SellerDistributionContainer';
+import ReviewDistributionContainer from './features/sellers/ReviewDistributionContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -107,6 +108,11 @@ function App() {
               {/* Row 2: Seller Data */}
               <div className="col-span-1 lg:col-span-12">
                 <SellerDistributionContainer />
+              </div>
+
+              {/* Row 3: Review Metrics */}
+              <div className="col-span-1 lg:col-span-6">
+                <ReviewDistributionContainer />
               </div>
             </>
        )} 
