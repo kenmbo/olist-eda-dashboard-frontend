@@ -77,3 +77,10 @@ export interface ReviewDistributionResponse {
   scores: string[];
   counts: number[];
 }
+
+export interface ReviewSalesScatterResponse {
+  seller_ids: string[];
+  total_sales: number[];
+  avg_scores: number[];
+  order_counts: number[];
+}
