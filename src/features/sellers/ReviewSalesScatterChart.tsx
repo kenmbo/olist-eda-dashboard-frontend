@@ -16,6 +16,15 @@ export default function ReviewSalesScatterChart({ data }: Props) {
     `Seller: ${id.substring(0, 8)}...<br>Avg Score: ${data.avg_scores[index]}<br>Total Sales: $${data.total_sales[index].toLocaleString()}<br>Orders: ${data.order_counts[index]}`
   );
 
+  // The Sentiment Gradient mapped to a Plotly continuous colorscale
+  const sentimentColorscale: Plotly.ColorScale = [
+    [0.0, '#e11d48'], // 1 Star (Rose)
+    [0.25, '#f97316'], // 2 Stars (Orange)
+    [0.5, '#fbbf24'], // 3 Stars (Amber)
+    [0.75, '#a3e635'], // 4 Stars (Light Green)
+    [1.0, '#10b981']  // 5 Stars (Emerald)
+  ];
+
   return (
     <ChartCard heightClass="h-80" title="Review Score vs. Total Sales">
       <Plot
@@ -28,12 +37,19 @@ export default function ReviewSalesScatterChart({ data }: Props) {
             text: hoverText,
             hoverinfo: 'text',
             marker: {
-              color: '#2dd4bf', // Tailwind teal-400
-              opacity: 0.5,     // Creates the clustering density effect
+              color: data.avg_scores,
+              colorscale: sentimentColorscale,
+              cmin: 1,
+              cmax: 5,
+              opacity: 0.6,
               size: data.order_counts,
               sizemode: 'area',
-              sizeref: 2 * Math.max(...data.order_counts) / (40 ** 2), // Scales bubbles appropriately
-              sizemin: 4
+              sizeref: 2 * Math.max(...data.order_counts) / (40 ** 2),
+              sizemin: 4,
+              line: {
+                color: 'rgba(255, 255, 255, 0.25)', // Subtle border to separate overlapping bubbles
+                width: 1
+              }
             }
           }
         ]}
