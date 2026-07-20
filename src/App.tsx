@@ -14,6 +14,7 @@ import DeliveryStagesContainer from './features/delivery/DeliveryStagesContainer
 import LeadOriginsContainer from './features/leads/LeadOriginsContainer';
 import LeadConversionsContainer from './features/leads/LeadConversionsContainer';import SellerDistributionContainer from './features/sellers/SellerDistributionContainer';
 import ReviewDistributionContainer from './features/sellers/ReviewDistributionContainer';
+import ReviewSalesScatterContainer from './features/sellers/ReviewSalesScatterContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -105,7 +106,7 @@ function App() {
                 <LeadConversionsContainer />
               </div>
 
-              {/* Row 2: Seller Data */}
+              {/* Row 2: Seller Volume */}
               <div className="col-span-1 lg:col-span-12">
                 <SellerDistributionContainer />
               </div>
@@ -114,9 +115,11 @@ function App() {
               <div className="col-span-1 lg:col-span-6">
                 <ReviewDistributionContainer />
               </div>
+              <div className="col-span-1 lg:col-span-6">
+                <ReviewSalesScatterContainer />
+              </div>
             </>
-       )} 
-
+       )}
        {/* =======PREDICTIONS======= */}
        {activeTab === 'predictions' && 
 	     <div className="text-gray-500">
