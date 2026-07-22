@@ -15,6 +15,7 @@ import LeadOriginsContainer from './features/leads/LeadOriginsContainer';
 import LeadConversionsContainer from './features/leads/LeadConversionsContainer';import SellerDistributionContainer from './features/sellers/SellerDistributionContainer';
 import ReviewDistributionContainer from './features/sellers/ReviewDistributionContainer';
 import ReviewSalesScatterContainer from './features/sellers/ReviewSalesScatterContainer';
+import RegressionTrendContainer from './features/predictions/RegressionTrendContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -121,11 +122,14 @@ function App() {
             </>
        )}
        {/* =======PREDICTIONS======= */}
-       {activeTab === 'predictions' && 
-	     <div className="text-gray-500">
-		Predictions & RFM charts coming soon...
-	    </div>
-       }
+       {activeTab === 'predictions' && (
+            <>
+              {/* Row 1: Top Level Trends */}
+              <div className="col-span-1 lg:col-span-12">
+                <RegressionTrendContainer />
+              </div>
+            </>
+	)}
 
        </div> 
       </main>
