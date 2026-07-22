@@ -84,3 +84,9 @@ export interface ReviewSalesScatterResponse {
   avg_scores: number[];
   order_counts: number[];
 }
+
+export interface RegressionTrendResponse {
+  dates: string[];
+  actual_sales: number[];
+  regression_trend: number[];
+}
