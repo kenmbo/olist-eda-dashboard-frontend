@@ -90,3 +90,9 @@ export interface RegressionTrendResponse {
   actual_sales: number[];
   regression_trend: number[];
 }
+
+export interface SalesForecastResponse {
+  months: string[];
+  actual_sales: (number | null)[];
+  forecast_sales: (number | null)[];
+}
