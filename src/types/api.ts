@@ -96,3 +96,10 @@ export interface SalesForecastResponse {
   actual_sales: (number | null)[];
   forecast_sales: (number | null)[];
 }
+
+export interface RfmResponse {
+  recency: number[];
+  frequency: number[];
+  monetary: number[];
+  segment: string[];
+}
