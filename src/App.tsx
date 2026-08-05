@@ -17,6 +17,7 @@ import ReviewDistributionContainer from './features/sellers/ReviewDistributionCo
 import ReviewSalesScatterContainer from './features/sellers/ReviewSalesScatterContainer';
 import RegressionTrendContainer from './features/predictions/RegressionTrendContainer';
 import SalesForecastContainer from './features/predictions/SalesForecastContainer';
+import RfmContainer from './features/predictions/RfmContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -132,6 +133,12 @@ function App() {
               <div className="col-span-1 lg:col-span-6">
                 <SalesForecastContainer />
               </div>
+
+              {/* Row 2: RFM Models */}
+              <div className="col-span-1 lg:col-span-12">
+                <RfmContainer />
+              </div>
+
             </>
 	)}
 
