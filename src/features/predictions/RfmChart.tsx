@@ -48,7 +48,7 @@ export default function RfmChart({ data }: Props) {
         data={traces as any}
         layout={{
           autosize: true,
-          margin: { t: 10, r: 20, l: 60, b: 40 },
+          margin: { t: 10, r: 20, l: 80, b: 60 },
           paper_bgcolor: 'transparent',
           plot_bgcolor: 'transparent',
           hovermode: 'closest',
