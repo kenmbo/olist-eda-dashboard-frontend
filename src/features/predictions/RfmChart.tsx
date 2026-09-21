@@ -48,7 +48,7 @@ export default function RfmChart({ data }: Props) {
         data={traces as any}
         layout={{
           autosize: true,
-          margin: { t: 10, r: 20, l: 80, b: 60 },
+          margin: { t: 10, r: 20, l: 50, b: 40 },
           paper_bgcolor: 'transparent',
           plot_bgcolor: 'transparent',
           hovermode: 'closest',
@@ -59,13 +59,19 @@ export default function RfmChart({ data }: Props) {
             font: { color: '#9ca3af' }
           },
           xaxis: { 
-            title: 'Recency (Days Since Last Order)',
+            title: {
+		    text: 'Recency (Days Since Last Order)',
+		    font: { color: '#9ca3af' }
+	    },
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
             autorange: 'reversed' // Recency to ze left....
           },
           yaxis: { 
-            title: 'Monetary Spend ($) - Log Scale',
+            title: {
+		    text: 'Monetary Spend ($) - Log Scale',
+		    font: { color: '#9ca3af' }
+	    },
             type: 'log', // Log scale flattens massive outliers
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
