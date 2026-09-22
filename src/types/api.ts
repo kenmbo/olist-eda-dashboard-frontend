@@ -103,3 +103,8 @@ export interface RfmResponse {
   monetary: number[];
   segment: string[];
 }
+
+export interface PredictedClvResponse {
+  segment: string[];
+  predicted_clv: number[];
+}
