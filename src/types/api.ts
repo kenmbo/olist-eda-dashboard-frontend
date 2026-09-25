@@ -108,3 +108,8 @@ export interface PredictedClvResponse {
   segment: string[];
   predicted_clv: number[];
 }
+
+export interface DelayRiskResponse {
+  factors: string[];
+  importance_scores: number[];
+}
