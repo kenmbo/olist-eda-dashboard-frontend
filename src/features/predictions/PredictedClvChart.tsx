@@ -53,7 +53,7 @@ export default function PredictedClvChart({ data }: Props) {
           xaxis: {
             gridcolor: '#374151',
             tickfont: { color: '#9ca3af' },
-            tickangle: -45,
+            tickangle: 0,
           },
           yaxis: {
             title: {
