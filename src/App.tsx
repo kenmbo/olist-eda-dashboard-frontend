@@ -18,6 +18,7 @@ import ReviewSalesScatterContainer from './features/sellers/ReviewSalesScatterCo
 import RegressionTrendContainer from './features/predictions/RegressionTrendContainer';
 import SalesForecastContainer from './features/predictions/SalesForecastContainer';
 import RfmContainer from './features/predictions/RfmContainer';
+import PredictedClvContainer from './features/predictions/PredictedClvContainer';
 
 function App() {
   // State to track which tab is currently selected
@@ -137,6 +138,11 @@ function App() {
               {/* Row 2: RFM Models */}
               <div className="col-span-1 lg:col-span-12">
                 <RfmContainer />
+              </div>
+
+	      {/* Row 3: CLV & Risk */}
+              <div className="col-span-1 lg:col-span-6">
+                <PredictedClvContainer />
               </div>
 
             </>
