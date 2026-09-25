@@ -6,6 +6,10 @@ import ChartCard from '../../components/common/ChartCard';
 // @ts-expect-error - Vite requires .default for CommonJS interop, but TS types don't recognize this
 const Plot = createPlotlyComponent.default(Plotly);
 
+interface Props {
+  data: PredictedClvResponse;
+}
+
 const SEGMENT_COLORS: Record<string, string> = {
 	'Champions': '#10b981',
 	'Loyal': '#3b82f6',
