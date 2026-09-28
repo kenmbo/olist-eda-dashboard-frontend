@@ -1,6 +1,7 @@
 import Plotly from 'plotly.js-dist-min';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import type { DelayRiskResponse } from '../../types/api';
+import ChartCard from '../../components/common/ChartCard';
 
 // @ts-expect-error - Vite requires .default for CommonJS interop, but TS types don't recognize it
 const Plot = createPlotlyComponent.default(Plotly);
@@ -11,7 +12,8 @@ interface Props {
 
 export default function DeliveryRiskChart({ data }: Props) {
   return (
-  <Plot
+    <ChartCard heightClass="h-96" title="Delivery Delay Risk Factors">
+      <Plot
         data={[
           {
             x: data.importance_scores,
@@ -46,5 +48,6 @@ export default function DeliveryRiskChart({ data }: Props) {
         style={{ width: '100%', height: '100%' }}
         config={{ displayModeBar: false }}
       />
+    </ChartCard>
   );
 }
