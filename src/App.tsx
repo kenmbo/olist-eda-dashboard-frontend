@@ -145,6 +145,10 @@ function App() {
                 <PredictedClvContainer />
               </div>
 
+	      {/* THE FINAL CHART! */}
+              <div className="col-span-1 lg:col-span-6">
+                <DeliveryRiskContainer />
+              </div>
             </>
 	)}
 
