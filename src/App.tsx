@@ -19,6 +19,7 @@ import RegressionTrendContainer from './features/predictions/RegressionTrendCont
 import SalesForecastContainer from './features/predictions/SalesForecastContainer';
 import RfmContainer from './features/predictions/RfmContainer';
 import PredictedClvContainer from './features/predictions/PredictedClvContainer';
+import DeliveryRiskContainer from './features/predictions/DeliveryRiskContainer';
 
 function App() {
   // State to track which tab is currently selected
