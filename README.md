@@ -1,7 +1,7 @@
 # Dashboard UI website
 For Data Science! ...and web development too.
 
-This dashboard website showcases featuring various top-level key preformance indicators (KPI) and prediction analysis work based on the data given in the O-List e-commerce dataset.
+This dashboard website showcases various top-level key preformance indicators (KPI) and prediction analysis work based on the data given in the O-List e-commerce dataset.
 
 ![Picture of the dashboard in a web browser. This showcases the frontend of this project. The dashboard features a daily orders line graph, a heatmap of orders by day and hour, and a customer density heatmap.](docs/assets/screenshot-frontend.png)
 
@@ -23,8 +23,7 @@ cd olist-eda-dashboard/
 cd frontend/
 
 # Install depndencies
-npm install react react-dom vite tailwindcss plotly.js-dist-min lucide-react
-@tailwindcss/vite@next
+npm install react react-dom vite tailwindcss plotly.js-dist-min lucide-react @tailwindcss/vite@next
 
 # Run server
 npm run dev
